@@ -11,7 +11,8 @@ application supports.
 
 == Are there any dependencies?
 
-Yes, this plugin only works with Rails 2.3
+Yes, this plugin only works with Rails 2.3, thanks to the support for Rails Engines, which basically lets
+you embed a "mini app" inside of your main app.
 
 == How do I use it?
 
