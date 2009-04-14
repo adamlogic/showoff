@@ -9,6 +9,10 @@ application supports.
   script/plugin install git://github.com/adamlogic/showoff.git
   script/generate showoff
 
+== Are there any dependencies?
+
+Yes, this plugin only works with Rails 2.3
+
 == How do I use it?
 
 Just throw your mockups into app/views/mockups, then navigate to /mockups in your app.
