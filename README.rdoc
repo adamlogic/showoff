@@ -1,7 +1,7 @@
 = Showoff
 
 The showoff plugin gives you a simple way to throw arbitrary HTML mockups into your appliction.
-You can use static HTML, ERB, or any other template language (such as HAML) that your 
+You can use static HTML, ERB, or any other templating language (such as HAML) that your 
 application supports.  
 
 == How do I install it?
@@ -17,4 +17,14 @@ Just throw your mockups into app/views/mockups, then navigate to /mockups in you
 
 Once you've run the generator, navigate to /mockups in your app to see some examples.
 
-Copyright (c) 2009 [Adam McCrea], released under the MIT license
+== What's the point of this?
+
+* Avoid duplicating headers, footers, and other layout cruft by using the same layouts that the rest of your app uses.
+* By using the same CSS and JS files as the rest of your app, you avoid the pain of merging these things in later.
+* Use partials to keep your mockups more maintainable.
+* Because you have access to Ruby (as opposed to static HTML mockups), you can take advantage of looping to avoid duplication.
+* If you have a library such as Faker installed, you can use it to generate fake data and Lorum Ipsum text, rather than pasting it in.
+* Easily use your templating language of choice when building mockups (I use HAML).
+* Because your mockups can follow the same style and conventions as application code, showoff can drastically reduce the time it takes to wire up a mockup.
+
+<em>Copyright (c) 2009 Adam McCrea, released under the MIT license</em>
