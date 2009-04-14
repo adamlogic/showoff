@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+	<%= stylesheet_link_tag 'mockups.css' %>
+</head>
+
+<body>
+  <ul id="mockups_tree">
+    <% @entries.each do |name, mockups| %>
+      <li>
+        <% if mockups.nil? %>
+          <%= link_to name.humanize, mockup_path(name), :target => 'content' %>
+        <% else %>
+          <h2><%= name.humanize.titleize %></h2>
+          <ul>
+            <% mockups.each do |mockup| %>
+              <li><%= link_to mockup.humanize, mockup_path(mockup, :parent_dir => name), :target => 'content' %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</body>
+
+</html>
