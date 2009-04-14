@@ -2,24 +2,23 @@
 <html>
 
 <head>
-	<%= stylesheet_link_tag 'mockups.css' %>
+	<%= stylesheet_link_tag 'showoff.css' %>
 </head>
 
 <body>
-  <ul id="mockups_tree">
-    <% @entries.each do |name, mockups| %>
+  <ul id="showoff_tree">
+    <% @directories.each do |name, mockups| %>
       <li>
-        <% if mockups.nil? %>
-          <%= link_to name.humanize, mockup_path(name), :target => 'content' %>
-        <% else %>
-          <h2><%= name.humanize.titleize %></h2>
-          <ul>
-            <% mockups.each do |mockup| %>
-              <li><%= link_to mockup.humanize, mockup_path(mockup, :parent_dir => name), :target => 'content' %></li>
-            <% end %>
-          </ul>
-        <% end %>
+        <h2><%= name.humanize.titleize %></h2>
+        <ul>
+          <% mockups.each do |mockup| %>
+            <li><%= link_to mockup.humanize.titleize, mockup_path(mockup, :parent_dir => name), :target => 'content' %></li>
+          <% end %>
+        </ul>
       </li>
+    <% end %>
+    <% @entries.each do |name| %>
+      <li><%= link_to name.humanize.titleize, mockup_path(name), :target => 'content' %></li>
     <% end %>
   </ul>
 </body>

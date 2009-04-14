@@ -1,8 +1,12 @@
 Description:
-    Explain the generator
+  The showoff generator creates the mockups directory along with
+  a few samples to demonstrate how to use the plugin. It also
+  creates a stylesheet that is used in the sidebar when viewing
+  mockups.
 
 Example:
-    ./script/generate mockups Thing
+  script/generate showoff
 
-    This will create:
-        what/will/it/create
+  This will create:
+    app/views/mockups (and some samples therein)
+    public/stylesheets/showoff.css

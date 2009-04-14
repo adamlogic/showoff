@@ -5,20 +5,19 @@ class MockupsController < ApplicationController
   end
 
   def index
-    @entries = ActiveSupport::OrderedHash.new
+    @entries = []
+    @directories = ActiveSupport::OrderedHash.new
 
     Dir.glob File.join(Rails.root, 'app', 'views', 'mockups', '**', '[^_]*.html.*') do |template|
       parent_dir = File.dirname(template).split(/[\/]/).last
       template_name = File.basename(template).split('.').first
 
       if parent_dir == 'mockups'
-        @entries[template_name] = nil
+        @entries << template_name
       else
-        (@entries[parent_dir] ||= []) << template_name
+        (@directories[parent_dir] ||= []) << template_name
       end
     end
-
-    # @pages = template_files.map { |f| f.scan(/mockups\/([^.]+)/).flatten.first }
 
     render :layout => false
   end
