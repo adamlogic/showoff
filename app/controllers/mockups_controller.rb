@@ -8,7 +8,7 @@ class MockupsController < ApplicationController
     @entries = []
     @directories = ActiveSupport::OrderedHash.new
 
-    Dir.glob File.join(Rails.root, 'app', 'views', 'mockups', '**', '[^_]*.html.*') do |template|
+    Dir.glob File.join(Rails.root, 'app', 'views', 'mockups', '**', '[^_]*.htm*') do |template|
       parent_dir = File.dirname(template).split(/[\/]/).last
       template_name = File.basename(template).split('.').first
 
@@ -37,7 +37,7 @@ class MockupsController < ApplicationController
 
       filename_components = File.basename(located_files[0]).split('.')
 
-      if filename_components[1] == 'html'
+      if filename_components.length < 4
         true
       else
         filename_components[1]
