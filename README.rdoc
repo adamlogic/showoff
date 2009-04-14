@@ -1,0 +1,20 @@
+= Showoff
+
+The showoff plugin gives you a simple way to throw arbitrary HTML mockups into your appliction.
+You can use static HTML, ERB, or any other template language (such as HAML) that your 
+application supports.  
+
+== How do I install it?
+
+  script/plugin install git://github.com/adamlogic/showoff.git
+  script/generate showoff
+
+== How do I use it?
+
+Just throw your mockups into app/views/mockups, then navigate to /mockups in your app.
+
+== Can I see an example?
+
+Once you've run the generator, navigate to /mockups in your app to see some examples.
+
+Copyright (c) 2009 [Adam McCrea], released under the MIT license
