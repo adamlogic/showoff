@@ -8,7 +8,7 @@ class MockupsController < ApplicationController
     @entries = []
     @directories = ActiveSupport::OrderedHash.new
 
-    Dir.glob File.join(Rails.root, 'app', 'views', 'mockups', '**', '[^_]*.htm*') do |template|
+    Dir.glob File.join(Rails.root, 'app', 'views', 'mockups', '**', '[^_]*.html*') do |template|
       parent_dir = File.dirname(template).split(/[\/]/).last
       template_name = File.basename(template).split('.').first
 
