@@ -16,7 +16,9 @@ you embed a "mini app" inside of your main app.
 
 == How do I use it?
 
-Just throw your mockups into app/views/mockups, then navigate to /mockups in your app.
+Just throw your mockups into app/views/mockups, then navigate to /mockups in your app. Just like any other
+Rails view, you can use partials, helpers, etc. If you want to use a layout other than your application
+default, tack it on as an additional file extension (example.html.erb.alternate).
 
 == Can I see an example?
 

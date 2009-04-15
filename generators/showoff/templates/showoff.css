@@ -6,4 +6,5 @@ body { background-color: #eee; font: 13px/1.5 Helvetica, Arial, 'Liberation Sans
 
 #showoff_tree { padding: 10px; }
 #showoff_tree ul { padding: 0 10px 20px; }
+#showoff_tree li { white-space: nowrap; }
 #showoff_tree h2 { padding-bottom: 3px; font-weight: bold; }

@@ -40,7 +40,7 @@ class MockupsController < ApplicationController
       if filename_components.length < 4
         true
       else
-        filename_components[1]
+        filename_components.last
       end
     end
 

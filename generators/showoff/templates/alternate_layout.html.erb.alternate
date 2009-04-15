@@ -1,7 +1,7 @@
 <h1>Alternate Layout Example</h1>
 
 <p>
-  If a template has an additinal file extension, such as <code>alternate_layout.alternate.html.erb</code>, 
+  If a template has an additinal file extension, such as <code>alternate_layout.html.erb.alternate</code>, 
   the first extension will be used as the layout.  In this case, Rails is expecting a layout named 
   'alternate' to be defined.
 </p>
