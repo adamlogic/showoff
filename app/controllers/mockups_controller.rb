@@ -23,6 +23,8 @@ class MockupsController < ApplicationController
   end
 
   def show
+    session[:template_name] = params[:template_name]
+    session[:parent_dir]    = params[:parent_dir]
     template_path = File.join(['mockups', params[:parent_dir], params[:template_name]].compact)
     render :template => template_path, :layout => extract_layout(template_path)
   end
