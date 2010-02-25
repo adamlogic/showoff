@@ -1,4 +1,7 @@
 class MockupsController < ApplicationController
+  LAYOUTS = Dir.glob(File.join(Rails.root, 'app', 'views', 'layouts', '*.html.*')).map do |file|
+    File.basename(file).split('.').first
+  end
   
   def frameset
     render :layout => false
@@ -26,24 +29,14 @@ class MockupsController < ApplicationController
     session[:template_name] = params[:template_name]
     session[:parent_dir]    = params[:parent_dir]
     template_path = File.join(['mockups', params[:parent_dir], params[:template_name]].compact)
-    render :template => template_path, :layout => extract_layout(template_path)
+    render :template => template_path, :layout => determine_layout
   end
 
   private
 
-    def extract_layout(template_path)
-      full_path = File.join(Rails.root, 'app', 'views', template_path) 
-      located_files = Dir.glob("#{full_path}*")
-
-      return true if located_files.empty?
-
-      filename_components = File.basename(located_files[0]).split('.')
-
-      if filename_components.length < 4
-        true
-      else
-        filename_components.last
-      end
+    def determine_layout
+      directory = params[:parent_dir].to_s.downcase
+      LAYOUTS.include?(directory) ? directory : true
     end
 
 end
