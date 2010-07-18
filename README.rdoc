@@ -4,27 +4,27 @@ The showoff plugin gives you a simple way to throw arbitrary HTML mockups into y
 You can use static HTML, ERB, or any other templating language (such as HAML) that your 
 application supports.  
 
-== How do I install it?
+== Installation
 
-  script/plugin install git://github.com/adamlogic/showoff.git
-  script/generate showoff
+  rails plugin install git://github.com/adamlogic/showoff.git
+  rails generate showoff:install
 
-== Are there any dependencies?
+== Dependencies
 
-Yes, this plugin only works with Rails 2.3, thanks to the support for Rails Engines, which basically lets
-you embed a "mini app" inside of your main app.
+Yes, this plugin only works with Rails 3.
+Rails 2 is still supported in the rails2 branch.
 
-== How do I use it?
+== Usage
 
 Just throw your mockups into app/views/mockups, then navigate to /mockups in your app. Just like any other
 Rails view, you can use partials, helpers, etc. If you want to use a layout other than your application
 default, nest your mockup in a subdirectory with the same name as the layout (see examples).
 
-== Can I see an example?
+== Examples
 
 Once you've run the generator, navigate to /mockups in your app to see some examples.
 
-== What's the point of this?
+== Why?
 
 * Avoid duplicating headers, footers, and other layout cruft by using the same layouts that the rest of your app uses.
 * By using the same CSS and JS files as the rest of your app, you avoid the pain of merging these things in later.
@@ -34,4 +34,8 @@ Once you've run the generator, navigate to /mockups in your app to see some exam
 * Easily use your templating language of choice when building mockups (I use HAML).
 * Because your mockups can follow the same style and conventions as application code, showoff can drastically reduce the time it takes to wire up a mockup.
 
-<em>Copyright (c) 2009 Adam McCrea, released under the MIT license</em>
+== Contributors
+
+Joe Fiorini (faithfulgeek)
+
+<em>Copyright (c) 2010 Adam McCrea, released under the MIT license</em>
