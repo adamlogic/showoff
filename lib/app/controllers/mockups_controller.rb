@@ -1,4 +1,6 @@
 class MockupsController < ApplicationController
+  unloadable
+
   LAYOUTS = Dir.glob(File.join(Rails.root, 'app', 'views', 'layouts', '*.html.*')).map do |file|
     File.basename(file).split('.').first
   end
