@@ -37,5 +37,6 @@ Once you've run the generator, navigate to /mockups in your app to see some exam
 == Contributors
 
 Joe Fiorini (faithfulgeek)
+Mani Tadayon (bowsersenior)
 
 <em>Copyright (c) 2010 Adam McCrea, released under the MIT license</em>
