@@ -1,3 +1,8 @@
+THIS REPO IS NO LONGER MAINTAINED
+
+We haven't used this for a while. If you would like to take over ownership
+of this repo, please let us know.
+
 = Showoff
 
 The showoff plugin gives you a simple way to throw arbitrary HTML mockups into your appliction.
